@@ -4,7 +4,6 @@
       <h1>Welcome To Paradise</h1>
 
       <div class="video-container">
-        <div class="color-overlay"></div>
         <video autoplay loop muted>
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
@@ -25,11 +24,11 @@ export default {
 <style>
 .section {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -45,13 +44,19 @@ export default {
 
 .video-container {
   position: absolute;
-  /* top: 0; */
-  /* left: 0;ss */
-  width: 100%;
-  height: 100vh;
-  /* overflow: hidden; */
-  /* size: auto; */
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; 
+  overflow: hidden;
 }
+
+.video-container video{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 
  @media (min-aspect-ratio: 16/9) {
   #video-container {
@@ -66,13 +71,4 @@ export default {
   }
 } 
 
-/* .color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-} */
 </style>
