@@ -1,8 +1,6 @@
 <template>
   <div class="section">
-    <!-- <div class="text-annat">
-      <h1>asasdasdasdd</h1>
-    </div>-->
+    <h1 class="h1Räng">Rängbågen</h1>
     <div class="bild">
       <video id="videoBG" poster="../assets/asd.jpg" autoplay muted>
         <source src="../assets/drone.mp4" type="video/mp4" />
@@ -27,18 +25,25 @@ export default {
   justify-content: center;
   overflow: hidden;
 }
-/* .text-annat {
-  background-color: rgba(255, 255, 255, 0.3);
-  position: absolute;
+.h1Räng {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Cookie";
+  padding: 20px;
+  margin: 15px;
   z-index: 1;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  border-radius: 20px;
-  height: 100px;
-  width: 200;
-} */
+  opacity: 0.7;
+  color: white;
+}
+.bild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: red;
+  height: 100vh;
+  opacity: 0.9;
+}
 
 #videoBG {
   /* position:absolute; */
@@ -46,6 +51,8 @@ export default {
   /* left:0; */
   /* height:80%; */
   /* overflow:hidden; */
+  /* min-height: 100%;
+  min-width: 100%; */
 }
 
 h1 {
@@ -62,14 +69,14 @@ h1 {
 @media (max-aspect-ratio: 16/9) {
   #videoBG {
     width: auto;
-    height: 100vh;
+    height: 110vh;
   }
 }
 @media (max-width: 960px) {
   #videoBG {
     display: none;
   }
-  .bild {
+  .section {
     background-image: url("../assets/asd.jpg");
     background-size: cover;
     height: 100vh;
