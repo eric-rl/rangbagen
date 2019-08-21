@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav id="navbar">
-      <v-img src="../assets/rang-logga.png" width="5px" height="5px"></v-img>
+      <img src="../assets/rang-logga.png" width="57px" height="57px"/>
       <ul id="links">
         <li>
           <a href="#">Rängbågen</a>
@@ -53,14 +53,13 @@ nav {
   width: 100%;
   background-color: transparent;
   box-sizing: border-box;
-  /* padding: 12px 18px; */
+  padding: 12px 18px;
   transition: background-color 0.3s ease-in-out;
   z-index: 999;
   color: whitesmoke;
-  display: flex;
-  justify-content: right;
   display: flex !important;
 }
+
 
 nav span {
   font-weight: 600;
@@ -73,17 +72,23 @@ nav.scroll {
 ul.scroll > li > a {
   color: black;
 }
+
+ul.scroll > li > a:after {
+  background: black;
+}
+
 ul {
   padding: 0;
   list-style: none;
-  display: table;
-  width: 40%;
-  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
 }
 li {
   display: table-cell;
   position: relative;
-  padding: 30px 0;
+  margin-left: 30px;
 }
 a {
   color: #fff;
