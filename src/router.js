@@ -15,22 +15,22 @@ export default new Router({
     },
     {
       path: '/rängbågen',
-      name: 'rängbågen',
+      name: 'Rängbågen',
       component: () => import('./views/Rängbågen.vue')
     },
     {
       path: '/historik',
-      name: 'historik',
+      name: 'Historik',
       component: () => import('./views/Historik.vue')
     },
     {
       path: '/köket',
-      name: 'köket',
+      name: 'Köket',
       component: () => import('./views/Köket.vue')
     },
     {
       path: '/kontakt',
-      name: 'kontakt',
+      name: 'Kontakt',
       component: () => import('./views/Kontakt.vue')
     },
   ]
