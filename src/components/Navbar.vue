@@ -1,28 +1,36 @@
 <template>
   <div>
-    <nav id="navbar">
-      <img src="../assets/rang-logga.png" width="57px" height="57px"/>
-      <ul id="links">
-        <li>
-          <a to="/rangbagen">Rängbågen</a>
-        </li>
-        <li>
-          <a to="/historik">Historik</a>
-        </li>
-        <li>
-          <a to="/köket">Köket</a>
-        </li>
-        <li>
-          <a to="/kontakt">Kontakt</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="nav-desktop">
+      <nav id="navbar">
+        <img src="../assets/rang-logga.png" width="57px" height="57px" />
+        <ul id="links">
+          <li>
+            <router-link to="rängbågen">Rängbågen</router-link>
+          </li>
+          <li>
+            <router-link to="/historik">Historik</router-link>
+          </li>
+          <li>
+            <router-link to="/köket">Köket</router-link>
+          </li>
+          <li>
+            <router-link to="/kontakt">Kontakt</router-link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-mobile">
+      
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Navbar",
+  components: {
+
+  },
   methods: {
     handleScroll(event) {
       let nav = document.querySelector("#navbar");
@@ -53,7 +61,7 @@ nav {
   width: 100%;
   background-color: transparent;
   box-sizing: border-box;
-  padding: 12px 18px;
+  padding: 12px 25px;
   transition: background-color 0.3s ease-in-out;
   z-index: 999;
   color: whitesmoke;
@@ -111,5 +119,11 @@ a:after {
 a:hover:after {
   width: 100%;
   left: 0;
+}
+
+@media only screen and (max-width: 960px) {
+  .nav-desktop {
+    display: none;
+  }
 }
 </style>
