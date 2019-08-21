@@ -4,7 +4,7 @@
       <h1>Welcome To Paradise</h1>
 
       <div class="video-container">
-        <video autoplay loop muted>
+        <video loop muted>
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
       </div>
