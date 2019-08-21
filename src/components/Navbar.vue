@@ -4,16 +4,16 @@
       <img src="../assets/rang-logga.png" width="57px" height="57px"/>
       <ul id="links">
         <li>
-          <a href="#">Rängbågen</a>
+          <a to="/rangbagen">Rängbågen</a>
         </li>
         <li>
-          <a href="#">Historik</a>
+          <a to="/historik">Historik</a>
         </li>
         <li>
-          <a href="#">Köket</a>
+          <a to="/köket">Köket</a>
         </li>
         <li>
-          <a href="#">Kontakt</a>
+          <a to="/kontakt">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -60,14 +60,11 @@ nav {
   display: flex !important;
 }
 
-
-nav span {
-  font-weight: 600;
-  letter-spacing: 0.085em;
-}
-
 nav.scroll {
   background-color: rgb(223, 215, 225);
+}
+ul > li > a {
+  cursor: pointer;
 }
 ul.scroll > li > a {
   color: black;
@@ -95,9 +92,8 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-
   display: inline-block;
-  /* padding: 5px 20px; */
+  padding: 5px 20px;
   position: relative;
 }
 a:after {
