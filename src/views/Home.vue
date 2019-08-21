@@ -1,17 +1,12 @@
 <template>
-  <div>
-    <div class="section">
-      <h1>Welcome To Paradise</h1>
-
-      <div class="video-container">
-        <div class="color-overlay"></div>
-        <video autoplay loop muted>
-          <source src="../assets/drone.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-    <div style="height:400px;width:100%">
-      <p>sdflksdjflkjsdfkjsdhfkjdsh kjsdhfkdsbf dskjfhkjdshfds sdhfkjdsh</p>
+  <div class="section">
+    <!-- <div class="text-annat">
+      <h1>asasdasdasdd</h1>
+    </div>-->
+    <div class="bild">
+      <video id="videoBG" poster="../assets/asd.jpg" autoplay muted>
+        <source src="../assets/drone.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 </template>
@@ -27,52 +22,59 @@ export default {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
   overflow: hidden;
 }
-
-.section h1 {
-  text-align: center;
-  font-size: 6rem;
-  font-family: "Cookie";
-  padding: 20px;
-  margin: 15px;
-  z-index: 1;
-  opacity: 0.7;
-}
-
-.video-container {
+/* .text-annat {
+  background-color: rgba(255, 255, 255, 0.3);
   position: absolute;
-  /* top: 0; */
-  /* left: 0;ss */
-  width: 100%;
-  height: 100vh;
-  /* overflow: hidden; */
-  /* size: auto; */
+  z-index: 1;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  border-radius: 20px;
+  height: 100px;
+  width: 200;
+} */
+
+#videoBG {
+  /* position:absolute; */
+  /* top:0; */
+  /* left:0; */
+  /* height:80%; */
+  /* overflow:hidden; */
 }
 
- @media (min-aspect-ratio: 16/9) {
-  #video-container {
+h1 {
+  font-weight: 300;
+  margin-top: 24px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
     width: 100vw;
     height: auto;
   }
 }
 @media (max-aspect-ratio: 16/9) {
-  #video-container {
+  #videoBG {
     width: auto;
     height: 100vh;
   }
-} 
-
-/* .color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
-} */
+}
+@media (max-width: 960px) {
+  #videoBG {
+    display: none;
+  }
+  .bild {
+    background-image: url("../assets/asd.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 </style>
