@@ -1,10 +1,13 @@
 <template>
-  <div class="section">
-    <h1 class="h1Räng">Rängbågen</h1>
-    <div class="bild">
-      <video id="videoBG" poster="../assets/asd.jpg" autoplay muted>
-        <source src="../assets/drone.mp4" type="video/mp4" />
-      </video>
+  <div>
+    <div class="section">
+      <h1>Welcome To Paradise</h1>
+
+      <div class="video-container">
+        <video autoplay loop muted>
+          <source src="../assets/drone.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +21,7 @@ export default {
 <style>
 .section {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -38,30 +41,21 @@ export default {
 .bild {
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; 
+  overflow: hidden;
+}
+
+.video-container video{
+  object-fit: cover;
   width: 100%;
-  background-color: red;
-  height: 100vh;
-  opacity: 0.9;
+  height: 100%;
 }
 
-#videoBG {
-  /* position:absolute; */
-  /* top:0; */
-  /* left:0; */
-  /* height:80%; */
-  /* overflow:hidden; */
-  /* min-height: 100%;
-  min-width: 100%; */
-}
 
-h1 {
-  font-weight: 300;
-  margin-top: 24px;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  #videoBG {
+ @media (min-aspect-ratio: 16/9) {
+  #video-container {
     width: 100vw;
     height: auto;
   }
@@ -83,5 +77,6 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
   }
-}
+} 
+
 </style>
