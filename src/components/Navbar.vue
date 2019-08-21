@@ -20,30 +20,25 @@
       </nav>
     </div>
     <div class="nav-mobile">
-      <v-sheet min-height="400" class="overflow-hidden">
+      <v-sheet class="overflow-hidden nav-mobile">
         <v-container class="fill-height">
           <v-row align="center" justify="center">
-            <v-btn color="pink" dark @click.stop="drawer = !drawer">Toggle</v-btn>
+            <v-btn dark @click.stop="drawer = !drawer" outlined fab color="teal">
+              <v-icon color="black">mdi-menu</v-icon>
+            </v-btn>
           </v-row>
         </v-container>
 
-        <v-navigation-drawer fixed v-model="drawer" absolute temporary>
-          <v-list-item>
-            <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
-            </v-list-item-avatar>
-
-            <v-list-item-content>
-              <v-list-item-title>John Leider</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-
+        <v-navigation-drawer temporary height="80vh" dark v-model="drawer">
           <v-divider></v-divider>
 
-          <v-list dense>
+          <v-list>
             <v-list-item v-for="item in items" :key="item.title" link>
               <v-list-item-content>
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <v-list-item-title>
+                  <router-link to="/rangbagen"></router-link>
+                  {{ item.title }}
+                </v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -59,10 +54,7 @@ export default {
   data() {
     return {
       drawer: null,
-      items: [
-        { title: "Home",  },
-        { title: "About",  }
-      ]
+      items: [{ title: "Home", to: "rängbågen" }, { title: "About" }]
     };
   },
   components: {},
@@ -93,6 +85,14 @@ export default {
 @media only screen and (max-width: 960px) {
   .nav-desktop {
     display: none;
+  }
+  .nav-mobile {
+    height: 5em;
+    position: fixed;
+    z-index: 99;
+    width: 100vw;
+    color: transparent;
+    background-color: rgba(254, 254, 254, 0.557) !important;
   }
 }
 
