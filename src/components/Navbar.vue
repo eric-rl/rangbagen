@@ -1,19 +1,19 @@
 <template>
   <div>
     <nav id="navbar">
-      <v-img src="../assets/rang-logga.png" width="5px" height="5px"></v-img>
+      <!-- <v-img src="../assets/rang-logga.png" width="5px" height="5px"></v-img> -->
       <ul id="links">
         <li>
-          <a href="#">Rängbågen</a>
+          <a to="/rangbagen">Rängbågen</a>
         </li>
         <li>
-          <a href="#">Historik</a>
+          <a to="/historik">Historik</a>
         </li>
         <li>
-          <a href="#">Köket</a>
+          <a to="/köket">Köket</a>
         </li>
         <li>
-          <a href="#">Kontakt</a>
+          <a to="/kontakt">Kontakt</a>
         </li>
       </ul>
     </nav>
@@ -62,23 +62,23 @@ nav {
   display: flex !important;
 }
 
-nav span {
-  font-weight: 600;
-  letter-spacing: 0.085em;
-}
-
 nav.scroll {
   background-color: rgb(223, 215, 225);
+}
+ul > li > a {
+  cursor: pointer;
 }
 ul.scroll > li > a {
   color: black;
 }
+ul.scroll > li > a:after {
+  background: black;
+}
 ul {
-  padding: 0;
-  list-style: none;
   display: table;
   width: 40%;
   text-align: center;
+  margin-left: 20%;
 }
 li {
   display: table-cell;
@@ -90,9 +90,8 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-
   display: inline-block;
-  /* padding: 5px 20px; */
+  padding: 5px 20px;
   position: relative;
 }
 a:after {
