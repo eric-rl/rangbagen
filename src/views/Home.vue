@@ -8,6 +8,9 @@
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
       </div>
+      <div class="image-container">
+        <img src="../assets/mobile-landingpage.jpg" alt="">
+      </div>
     </div>
     <div style="height:400px;width:100%">
       <p>sdflksdjflkjsdfkjsdhfkjdsh kjsdhfkdsbf dskjfhkjdshfds sdhfkjdsh</p>
@@ -47,18 +50,17 @@ export default {
   top: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: 100%; 
+  min-height: 100%;
   overflow: hidden;
 }
 
-.video-container video{
+.video-container video {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-
- @media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16/9) {
   #video-container {
     width: 100vw;
     height: auto;
@@ -69,6 +71,13 @@ export default {
     width: auto;
     height: 100vh;
   }
-} 
-
+}
+@media only screen and (max-width: 960px) {
+  .video-container {
+    display: none;
+  }
+  .image-container {
+    position: absolute;
+  }
+}
 </style>

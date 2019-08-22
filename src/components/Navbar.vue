@@ -2,7 +2,7 @@
   <div>
     <div class="nav-desktop">
       <nav id="navbar">
-        <img src="../assets/rang-logga.png" width="57px" height="57px" />
+        <img src="../assets/rang-logga.png" width="77px" height="57px" />
         <ul id="links">
           <li>
             <router-link to="rängbågen">Rängbågen</router-link>
@@ -22,22 +22,23 @@
     <div class="nav-mobile">
       <v-sheet class="overflow-hidden nav-mobile">
         <v-container class="fill-height">
-          <v-row>
-            <v-btn @click.stop="drawer = !drawer" outlined fab color="teal">
+          <v-row class="flex-center">
+            <v-btn @click.stop="drawer = !drawer" text fab>
               <v-icon class="menu-icon">mdi-menu</v-icon>
             </v-btn>
+            <p class="rng">Rängbågen</p>
           </v-row>
         </v-container>
 
-        <v-navigation-drawer temporary height="30vh" width="100vw" v-model="drawer">
+        <v-navigation-drawer temporary height="100vh" width="30vw" v-model="drawer">
           <v-divider></v-divider>
 
           <v-list>
             <v-list-item v-for="item in items" :key="item.title" link>
               <v-list-item-content>
-                <!-- <router-link to= {{ item.linking }}> -->
+                <router-link :to="item.linking">
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
-                <!-- </router-link> -->
+                </router-link>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -93,21 +94,33 @@ export default {
   }
   .nav-mobile {
     height: 5em;
-    position: fixed;
+    position: absolute;
     z-index: 99;
     width: 100vw;
     color: transparent;
-    /* background-color: rgba(254, 254, 254, 0.557) !important; */
-    background-color: transparent !important;
+    background-color: rgba(224, 220, 225, 0.797) !important;
   }
-  a {
-    color: #fff;
+  a, .rng {
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
     display: inline-block;
     padding: 5px 20px;
     position: relative;
+  }
+  .flex-center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .rng{
+    padding: 0;
+    font-size: 1.4em;
+
+  }
+  .menu-icon{
+    margin-left: 20p
   }
 }
 
