@@ -23,22 +23,21 @@
       <v-sheet class="overflow-hidden nav-mobile">
         <v-container class="fill-height">
           <v-row align="center" justify="center">
-            <v-btn dark @click.stop="drawer = !drawer" outlined fab color="teal">
-              <v-icon color="black">mdi-menu</v-icon>
+            <v-btn @click.stop="drawer = !drawer" outlined fab color="teal">
+              <v-icon class="menu-icon">mdi-menu</v-icon>
             </v-btn>
           </v-row>
         </v-container>
 
-        <v-navigation-drawer temporary height="80vh" dark v-model="drawer">
+        <v-navigation-drawer temporary height="30vh" width="100vw" v-model="drawer">
           <v-divider></v-divider>
 
           <v-list>
             <v-list-item v-for="item in items" :key="item.title" link>
               <v-list-item-content>
-                <v-list-item-title>
-                  <router-link to="/rangbagen"></router-link>
-                  {{ item.title }}
-                </v-list-item-title>
+                <router-link to="rängbågen">
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </router-link>
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -54,7 +53,7 @@ export default {
   data() {
     return {
       drawer: null,
-      items: [{ title: "Home", to: "rängbågen" }, { title: "About" }]
+      items: [{ title: "Home" }]
     };
   },
   components: {},
@@ -92,7 +91,17 @@ export default {
     z-index: 99;
     width: 100vw;
     color: transparent;
-    background-color: rgba(254, 254, 254, 0.557) !important;
+    /* background-color: rgba(254, 254, 254, 0.557) !important; */
+    background-color: transparent !important;
+  }
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 5px 20px;
+    position: relative;
   }
 }
 
