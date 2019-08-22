@@ -22,7 +22,7 @@
     <div class="nav-mobile">
       <v-sheet class="overflow-hidden nav-mobile">
         <v-container class="fill-height">
-          <v-row align="center" justify="center">
+          <v-row>
             <v-btn @click.stop="drawer = !drawer" outlined fab color="teal">
               <v-icon class="menu-icon">mdi-menu</v-icon>
             </v-btn>
@@ -35,9 +35,9 @@
           <v-list>
             <v-list-item v-for="item in items" :key="item.title" link>
               <v-list-item-content>
-                <router-link to="rängbågen">
+                <!-- <router-link to= {{ item.linking }}> -->
                   <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </router-link>
+                <!-- </router-link> -->
               </v-list-item-content>
             </v-list-item>
           </v-list>
@@ -53,7 +53,13 @@ export default {
   data() {
     return {
       drawer: null,
-      items: [{ title: "Home" }]
+      items: [
+        { title: "Startsida", linking: "/" },
+        { title: "Rängbågen", linking: "rängbågen" },
+        { title: "Historik", linking: "historik" },
+        { title: "Köket", linking: "köket" },
+        { title: "Kontakt", linking: "kontakt" }
+      ]
     };
   },
   components: {},
