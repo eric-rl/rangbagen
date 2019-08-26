@@ -16,7 +16,7 @@
             <h1 class="thin">
               <i>Arbetsätt</i>
             </h1>
-            <br>
+            <br />
             <p>
               Vi ser och lyfter fram barnets olika uttryckssätt genom att använda oss av musik, drama, bild, rörelse mm. Genom detta
               arbetssätt får barnet chans att utveckla sina förmågor och på så vis stärks barnets självtillit. Det stimulerar också
@@ -25,19 +25,19 @@
           </v-col>
         </v-flex>
         <v-flex class="margin-auto" md7>
-          <v-img max-height="270px" src="../assets/blurred1.jpg"></v-img>
+          <v-img max-height="340px" src="../assets/blurred1.jpg"></v-img>
         </v-flex>
       </v-row>
       <v-row class="margin-top">
-        <v-flex class="margin-auto" md7>
-          <v-img max-height="270" aspect-ratio="1" src="../assets/loading.jpeg"></v-img>
+        <v-flex class="margin-auto order-2" md7>
+          <v-img max-height="340" src="../assets/loading.jpeg"></v-img>
         </v-flex>
-        <v-flex md5>
+        <v-flex md5 class="order-1">
           <v-col>
             <h1 class="thin">
               <i>Storlek</i>
             </h1>
-            <br>
+            <br />
             <p>
               Idag består verksamheten av 80 barn fördelade på fem åldershomogena avdelningar från 1 till 5 år. Vi har en
               fantastisk utemiljö med en gård på 17000 m²!
@@ -85,7 +85,7 @@ export default {};
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.7em;
-  min-height: 300vh;
+  min-height: 100vh;
   text-align: justify;
   margin: 20px 10%;
   letter-spacing: 1px;
