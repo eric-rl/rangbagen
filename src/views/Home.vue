@@ -7,7 +7,7 @@
       </h1>
 
       <div class="video-container color-overlay">
-        <video autoplay loop muted poster="../assets/loading.jpeg">
+        <video preload="none" onclick="this.paused ? this.play():this.pause();" loop muted poster="../assets/loading.jpeg">
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
       </div>
@@ -17,6 +17,7 @@
       <a class="icon-down-open-big hero-arrow">
         <v-icon id="rängbågen" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
       </a>
+      <p class="info">Tryck på videon för att pausa eller spela</p>
     </div>
     <Rängbågen />
   </div>
@@ -41,6 +42,16 @@ export default {
   margin-left: -15px;
   font-size: 1em;
   cursor: pointer;
+  z-index: 10;
+}
+.info{
+  color: #fff;
+  position: absolute;
+  bottom: 2.9em;
+  display: block;
+  left: 4%;
+  margin-left: -15px;
+  font-size: 1em;
   z-index: 10;
 }
 .section {
