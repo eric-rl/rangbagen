@@ -30,7 +30,7 @@
       </v-row>
       <v-row class="d-flex flex-wrap-reverse margin-top">
         <v-flex class="margin-auto order-2 pa-2" md7>
-          <v-img max-height="340" src="../assets/loading.jpeg"></v-img>
+          <v-img max-height="340" src="../assets/utemiljö.jpg"></v-img>
         </v-flex>
         <v-flex md5 class="order-1 pa-2">
           <v-col>
@@ -47,7 +47,7 @@
         </v-flex>
       </v-row>
     </div>
-    <v-row class="rängbågen-heading mb-6 justify-center">
+    <v-row class="rängbågen-heading mb-6 justify-center new-color">
       <v-col xs6 lg6>
         <div class="center">
           "Jag tror att de ord som bäst sammanfattar vår
@@ -69,7 +69,7 @@
             <br />
             <p>
               Rängbågen ser barnet som det rika och kompetenta barnet. Ett barn som utvecklas i en miljö präglad av lust och glädje.
-              Ett barn vars 100 språk aldrig för tystas, Rängbågen erbjuder en verksamhet med utrymme för en mångfald av uttrycksmedel.
+              Ett barn vars 100 språk aldrig får tystas, Rängbågen erbjuder en verksamhet med utrymme för en mångfald av uttrycksmedel.
             </p>
           </v-col>
         </v-flex>
@@ -104,6 +104,7 @@ export default {};
 </script>
 
 <style>
+
 .quote-info {
   font-size: 0.5em;
 }
@@ -140,6 +141,9 @@ export default {};
   text-align: center;
   height: 9em;
   background: #e1e0d7;
+}
+.new-color{
+  background:#c8c397;
 }
 .rängbågen-content {
   font-family: "Roboto", sans-serif;
