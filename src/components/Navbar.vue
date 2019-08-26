@@ -149,7 +149,7 @@ export default {
     height: 0px;
   }
   nav.scroll {
-    background-color: rgb(223, 215, 225);
+    background-color: rgba(223, 215, 225, 0.947);
   }
   ul > li > a {
     cursor: pointer;

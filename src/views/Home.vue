@@ -1,13 +1,20 @@
 <template>
   <div>
     <div class="section">
-      <h1>
+      <h1 style="font-style:italic">
         Välkommen till
         <br />Rängbågen
       </h1>
 
       <div class="video-container color-overlay">
-        <video preload="none" onclick="this.paused ? this.play():this.pause();" loop muted poster="../assets/loading.jpeg">
+        <video
+          preload="none"
+          onclick="this.paused ? this.play():this.pause();"
+          loop
+          muted
+          autoplay
+          poster="../assets/loading.jpeg"
+        >
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
       </div>
@@ -36,7 +43,7 @@ export default {
 .hero-arrow {
   color: #fff;
   position: absolute;
-  bottom: 2.0em;
+  bottom: 2.1em;
   display: block;
   left: 50%;
   margin-left: -15px;
@@ -44,7 +51,7 @@ export default {
   cursor: pointer;
   z-index: 10;
 }
-.info{
+.info {
   color: #fff;
   position: absolute;
   bottom: 2.9em;
