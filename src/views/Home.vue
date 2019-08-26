@@ -1,30 +1,48 @@
 <template>
   <div>
     <div class="section">
-      <h1>Welcome To Paradise</h1>
+      <h1>
+        Välkommen till
+        <br />Rängbågen
+      </h1>
 
-      <div class="video-container">
-        <video loop muted>
+      <div class="video-container color-overlay">
+        <video autoplay loop muted poster="../assets/loading.jpeg">
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="image-container">
-        <img src="../assets/mobile-landingpage.jpg" alt="">
+        <img src="../assets/mobile-landingpage.jpg" alt />
       </div>
+      <a class="icon-down-open-big hero-arrow">
+        <v-icon id="rängbågen" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
+      </a>
     </div>
-    <div style="height:400px;width:100%">
-      <p>sdflksdjflkjsdfkjsdhfkjdsh kjsdhfkdsbf dskjfhkjdshfds sdhfkjdsh</p>
-    </div>
+    <Rängbågen />
   </div>
 </template>
 
 <script>
+import Rängbågen from "./Rängbågen.vue";
 export default {
-  components: {}
+  components: {
+    Rängbågen
+  }
 };
 </script>
 
 <style>
+.hero-arrow {
+  color: #fff;
+  position: absolute;
+  bottom: 2.0em;
+  display: block;
+  left: 50%;
+  margin-left: -15px;
+  font-size: 1em;
+  cursor: pointer;
+  z-index: 10;
+}
 .section {
   position: relative;
   /* width: 100%; */
@@ -33,31 +51,27 @@ export default {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: black;
+}
+.h1-text {
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.1em;
 }
 
 .section h1 {
   text-align: center;
-  font-size: 6rem;
-  font-family: "Cookie";
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  color: #fff;
   padding: 20px;
   margin: 15px;
   z-index: 1;
-  opacity: 0.7;
-}
-
-.video-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-.video-container video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  margin-bottom: 5%;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -78,6 +92,26 @@ export default {
   }
   .image-container {
     position: absolute;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .image-container {
+    display: none !important;
+  }
+  .video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+  }
+
+  .video-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
   }
 }
 </style>

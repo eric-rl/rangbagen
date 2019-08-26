@@ -2,10 +2,12 @@
   <div>
     <div class="nav-desktop">
       <nav id="navbar">
-        <img src="../assets/rang-logga.png" width="77px" height="57px" />
+        <router-link class="no-styling" to="/">
+          <img src="../assets/rang-logga.png" class="logo" width="77px" height="56px" />
+        </router-link>
         <ul id="links">
           <li>
-            <router-link to="rängbågen">Rängbågen</router-link>
+            <router-link to="/" @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
           </li>
           <li>
             <router-link to="/historik">Historik</router-link>
@@ -68,8 +70,7 @@ export default {
     handleScroll(event) {
       let nav = document.querySelector("#navbar");
       let ul = document.querySelector("#links");
-      //   console.log(window.scrollY)
-      if (window.scrollY <= 20) {
+      if (window.scrollY <= window.innerHeight-82) {
         nav.className = "";
         ul.className = "";
       } else {
@@ -100,7 +101,8 @@ export default {
     color: transparent;
     background-color: rgba(224, 220, 225, 0.797) !important;
   }
-  a, .rng {
+  a,
+  .rng {
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     text-decoration: none;
@@ -109,18 +111,17 @@ export default {
     padding: 5px 20px;
     position: relative;
   }
-  .flex-center{
+  .flex-center {
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
-  .rng{
+  .rng {
     padding: 0;
     font-size: 1.4em;
-
   }
-  .menu-icon{
-    margin-left: 20p
+  .menu-icon {
+    margin-left: 20p;
   }
 }
 
@@ -128,6 +129,9 @@ export default {
   .nav-mobile {
     display: none;
     z-index: 99;
+  }
+  .logo{
+    margin-top: -6px;
   }
   nav {
     position: fixed;
@@ -141,7 +145,9 @@ export default {
     color: whitesmoke;
     display: flex !important;
   }
-
+  .no-styling:after {
+    height: 0px;
+  }
   nav.scroll {
     background-color: rgb(223, 215, 225);
   }
