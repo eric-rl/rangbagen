@@ -47,7 +47,7 @@
         </v-flex>
       </v-row>
     </div>
-    <v-row class="rängbågen-heading mb-6 justify-center new-color">
+    <v-row class="rängbågen-heading mb-6 justify-center">
       <v-col xs6 lg6>
         <div class="center">
           "Jag tror att de ord som bäst sammanfattar vår
@@ -142,15 +142,11 @@ export default {};
   height: 9em;
   background: #e1e0d7;
 }
-.new-color{
-  background:#c8c397;
-}
 .rängbågen-content {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.7em;
-  min-height: 100vh;
   text-align: justify;
   margin: 40px 10%;
   letter-spacing: 1px;

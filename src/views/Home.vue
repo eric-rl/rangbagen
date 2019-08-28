@@ -6,7 +6,7 @@
         <br />Rängbågen
       </h1>
 
-      <div class="video-container color-overlay">
+      <div class="video-container">
         <video
           preload="none"
           onclick="this.paused ? this.play():this.pause();"
@@ -19,7 +19,7 @@
         </video>
       </div>
       <div class="image-container">
-        <img src="../assets/mobile-landingpage.jpg" alt />
+        <!-- <img src="../assets/mobile-landingpage.jpg" alt /> -->
       </div>
       <a class="icon-down-open-big hero-arrow">
         <v-icon id="rängbågen" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
@@ -40,27 +40,6 @@ export default {
 </script>
 
 <style>
-.hero-arrow {
-  color: #fff;
-  position: absolute;
-  bottom: 2.1em;
-  display: block;
-  left: 50%;
-  margin-left: -15px;
-  font-size: 1em;
-  cursor: pointer;
-  z-index: 10;
-}
-.info {
-  color: #fff;
-  position: absolute;
-  bottom: 2.9em;
-  display: block;
-  left: 4%;
-  margin-left: -15px;
-  font-size: 1em;
-  z-index: 10;
-}
 .section {
   position: relative;
   /* width: 100%; */
@@ -71,13 +50,13 @@ export default {
   overflow: hidden;
   background-color: black;
 }
-.h1-text {
+/* .h1-text {
   text-align: center;
   font-size: 2em;
   text-transform: uppercase;
   font-weight: 100;
   letter-spacing: 0.1em;
-}
+} */
 
 .section h1 {
   text-align: center;
@@ -108,13 +87,50 @@ export default {
   .video-container {
     display: none;
   }
+  .info{
+    display: none;
+  }
+  .hero-arrow {
+    display: none;
+  }
   .image-container {
+    background-image: url("../assets/loading.jpeg");
+    opacity: 0.7;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 960px) {
   .image-container {
     display: none !important;
+  }
+  .hero-arrow {
+    color: #fff;
+    position: absolute;
+    bottom: 2.1em;
+    display: block;
+    left: 50%;
+    margin-left: -15px;
+    font-size: 1em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .info {
+    color: #fff;
+    position: absolute;
+    bottom: 2.9em;
+    display: block;
+    left: 4%;
+    margin-left: -15px;
+    font-size: 1em;
+    z-index: 10;
   }
   .video-container {
     position: absolute;
