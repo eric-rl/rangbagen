@@ -15,7 +15,7 @@
           </v-col>
         </v-flex>
         <v-flex class="margin-auto" md6>
-          <v-img max-height="340" src="../assets/köket-3.jpg"></v-img>
+          <v-img max-height="440" src="../assets/köket-3.jpg"></v-img>
         </v-flex>
       </v-row>
       <v-row class="d-flex flex-wrap-reverse margin-top">

@@ -24,13 +24,13 @@
             </p>
           </v-col>
         </v-flex>
-        <v-flex class="margin-auto" md7>
-          <v-img max-height="340px" src="../assets/blurred1.jpg"></v-img>
+        <v-flex class="margin-auto padding-left" md7>
+          <v-img max-height="440" src="../assets/blurred1.jpg"></v-img>
         </v-flex>
       </v-row>
       <v-row class="d-flex flex-wrap-reverse margin-top">
-        <v-flex class="margin-auto order-2 pa-2" md7>
-          <v-img max-height="340" src="../assets/utemiljö.jpg"></v-img>
+        <v-flex class="margin-auto order-2 pa-2 padding-right" md7>
+          <v-img max-height="440" src="../assets/utemiljö.jpg"></v-img>
         </v-flex>
         <v-flex md5 class="order-1 pa-2">
           <v-col>
@@ -73,13 +73,13 @@
             </p>
           </v-col>
         </v-flex>
-        <v-flex class="margin-auto" md7>
-          <v-img max-height="340px" src="../assets/barnsyn.jpg"></v-img>
+        <v-flex class="margin-auto padding-left" md7>
+          <v-img max-height="440" src="../assets/barnsyn.jpg"></v-img>
         </v-flex>
       </v-row>
       <v-row class="d-flex flex-wrap-reverse margin-top">
-        <v-flex class="margin-auto order-2 pa-2" md7>
-          <v-img max-height="340" src="../assets/leken.jpg"></v-img>
+        <v-flex class="margin-auto order-2 pa-2 padding-right" md7>
+          <v-img max-height="440" src="../assets/leken.jpg"></v-img>
         </v-flex>
         <v-flex md5 class="order-1 pa-2">
           <v-col>

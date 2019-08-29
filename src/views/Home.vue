@@ -87,7 +87,7 @@ export default {
   .video-container {
     display: none;
   }
-  .info{
+  .info {
     display: none;
   }
   .hero-arrow {
@@ -106,8 +106,17 @@ export default {
     min-height: 100%;
     overflow: hidden;
   }
+  .padding-left, .padding-right{
+    padding: 0;
+  }
 }
 @media only screen and (min-width: 960px) {
+  .padding-right {
+    padding-right: 5%;
+  }
+  .padding-left {
+    padding-left: 5%;
+  }
   .image-container {
     display: none !important;
   }
