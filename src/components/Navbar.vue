@@ -32,7 +32,7 @@
           </v-row>
         </v-container>
 
-        <v-navigation-drawer temporary height="100vh" width="30vw" v-model="drawer">
+        <v-navigation-drawer height="100vh" width="60vw" v-model="drawer">
           <v-divider></v-divider>
 
           <v-list>
