@@ -144,12 +144,14 @@ export default {
     z-index: 999;
     color: whitesmoke;
     display: flex !important;
+    
   }
   .no-styling:after {
     height: 0px;
   }
   nav.scroll {
     background-color: rgba(223, 215, 225, 0.947);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   ul > li > a {
     cursor: pointer;
