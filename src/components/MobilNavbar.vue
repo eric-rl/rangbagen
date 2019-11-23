@@ -63,7 +63,7 @@ export default {
   z-index: 999;
   position: fixed !important;
   cursor: pointer;
-  top: 23px;
+  top: 23px !important;
 }
 
 .bm-burger-bars {
@@ -105,7 +105,7 @@ span.bm-cross {
 }
 .bm-item-list > * > span {
   font-family: "Lato", sans-serif;
-  color: black;
+  color: black !important;
   font-weight: 600;
   margin-left: 10px;
   text-transform: uppercase;
