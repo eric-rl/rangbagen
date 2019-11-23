@@ -13,6 +13,7 @@
           loop
           muted
           poster="../image-gallery/Rangbagen27.jpg"
+          id="vid"
         >
           <source src="../assets/drone.mp4" type="video/mp4" />
         </video>
@@ -20,7 +21,7 @@
       <div class="image-container">
       </div>
       <a class="icon-down-open-big hero-arrow">
-        <v-icon id="rängbågen" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
+        <v-icon id="rängbågen" v-on:click="pauseVideo" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
       </a>
       <p class="info">Tryck på bilden för att spela eller pausa videon</p>
     </div>
@@ -33,6 +34,12 @@ import Rängbågen from '../components/Rängbågen'
 export default {
   components: {
     Rängbågen
+  },
+  methods: {
+    pauseVideo: function (){
+      var vid = document.getElementById("vid"); 
+      vid.pause();
+    }
   },
   created () {
     this.$store.commit('setOnHomePage', true)

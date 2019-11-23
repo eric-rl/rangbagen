@@ -31,7 +31,7 @@
       </v-row>
       <v-row class="margin-top">
         <v-flex lg5 offset-lg1 md7 order-xs2 order-md1>
-          <v-img max-height="440" contain src="../image-gallery/Rangbagen25.jpg"></v-img>
+          <v-img max-height="440" contain src="../image-gallery/Rangbagen9.jpg"></v-img>
         </v-flex>
         <v-flex lg5 md5 order-xs1 order-md2>
           <v-col>
@@ -75,7 +75,7 @@
           </v-col>
         </v-flex>
         <v-flex lg5 md7>
-          <v-img max-height="440" :position="position.left" contain src="../image-gallery/Rangbagen7.jpg"></v-img>
+          <v-img max-height="440" :position="position.left" contain src="../image-gallery/Rangbagen25.jpg"></v-img>
         </v-flex>
       </v-row>
       <v-row class="margin-top">

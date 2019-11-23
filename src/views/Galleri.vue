@@ -1,37 +1,29 @@
 <template>
-  <v-row>
-    <v-col cols="12" md="8" offset-md="2">
-      <v-card class="cards">
-        <v-container fluid>
-          <v-row>
-            <v-col v-for="(image, i) in images" :key="i" class="d-flex child-flex" cols="4">
-              <template>
-                <v-hover>
-                  <template v-slot:default="{ hover }">
-                    <v-card flat tile class="d-flex">
-                      <v-img :src="image.src" aspect-ratio="1.4" class="grey lighten-2"></v-img>
-                      <v-fade-transition>
-                        <v-overlay v-if="hover" absolute color="#ffffff">
-                          <BigImage :image="image.src"/>
-                        </v-overlay>
-                      </v-fade-transition>
-                    </v-card>
-                  </template>
-                </v-hover>
-              </template>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-card>
-    </v-col>
-  </v-row>
+  <v-container>
+    <v-row class="gallery-heading mb-6 justify-center" />
+    <div class="gallery-container">
+      <Stack
+        class="heeeej"
+        :column-min-width="350"
+        :gutter-width="15"
+        :gutter-height="15"
+        monitor-images-loaded
+      >
+        <Stack-item v-for="(image, i) in images" :key="i" style="transition: transform 300ms">
+          <img :src="image.src" alt="bild" />
+        </Stack-item>
+      </Stack>
+    </div>
+  </v-container>
 </template>
 
 <script>
-import BigImage from '../components/BigImage'
+import { Stack, StackItem } from "vue-stack-grid";
 export default {
+  name: "app",
   components: {
-    BigImage
+    Stack,
+    StackItem
   },
   data: () => ({
     overlay: false,
@@ -43,6 +35,7 @@ export default {
       { src: require("../image-gallery/Rangbagen5.jpg") },
       { src: require("../image-gallery/Rangbagen6.jpg") },
       { src: require("../image-gallery/Rangbagen7.jpg") },
+      { src: require("../image-gallery/AK9I1378.jpg") },
       { src: require("../image-gallery/Rangbagen8.jpg") },
       { src: require("../image-gallery/Rangbagen9.jpg") },
       { src: require("../image-gallery/Rangbagen10.jpg") },
@@ -72,8 +65,17 @@ export default {
 </script>
 
 <style scoped>
-.cards {
+.gallery-container {
   margin-top: 100px;
-  margin-bottom: 100px;
+  width: 80vw;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.gallery-heading {
+  height: 8em;
 }
 </style>
