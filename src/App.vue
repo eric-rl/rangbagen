@@ -8,18 +8,18 @@
 </template>
 
 <script>
-import MobilNavbar from "./components/MobilNavbar.vue";
-import Navbar from "./components/Navbar.vue";
-import Footer from "./components/Footer.vue";
+import MobilNavbar from './components/MobilNavbar.vue'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Navbar,
     MobilNavbar,
     Footer
   },
   data: () => ({})
-};
+}
 </script>
 
 <style>

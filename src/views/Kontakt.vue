@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import KontaktForm from "@/components/KontaktForm.vue";
+import KontaktForm from '@/components/KontaktForm.vue'
 export default {
   components: {
     KontaktForm
   },
-  created() {
-    this.$store.commit("setOnHomePage", false);
+  created () {
+    this.$store.commit('setOnHomePage', false)
   }
-};
+}
 </script>
 
 <style>

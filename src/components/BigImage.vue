@@ -23,18 +23,18 @@ export default {
   data () {
     return {
       dialog: false
-    };
+    }
   },
   props: {
     image: {}
   },
   methods: {
     test () {
-      this.dialog = true;
+      this.dialog = true
       console.log(this.dialog)
     }
   }
-};
+}
 </script>
 
 <style scoped>

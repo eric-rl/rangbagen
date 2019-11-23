@@ -66,8 +66,8 @@
 
 <script>
 export default {
-  name: "BottomFooter"
-};
+  name: 'BottomFooter'
+}
 </script>
 
 <style scoped>

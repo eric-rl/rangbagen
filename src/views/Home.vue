@@ -36,9 +36,9 @@ export default {
     Rängbågen
   },
   methods: {
-    pauseVideo: function (){
-      var vid = document.getElementById("vid"); 
-      vid.pause();
+    pauseVideo: function () {
+      var vid = document.getElementById('vid')
+      vid.pause()
     }
   },
   created () {

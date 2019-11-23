@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { Slide } from "vue-burger-menu"; // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { Slide } from 'vue-burger-menu' // import the CSS transitions you wish to use, in this case we are using `Slide`
 export default {
   data: () => ({
     isMenuOpen: false
@@ -35,13 +35,13 @@ export default {
     Slide
   },
   methods: {
-    handleOpenMenu() {
-      this.isMenuOpen = true;
+    handleOpenMenu () {
+      this.isMenuOpen = true
     },
-    handleCloseMenu() {
-      this.isMenuOpen = false;
+    handleCloseMenu () {
+      this.isMenuOpen = false
     },
-    handleScroll(event) {
+    handleScroll (event) {
       if (window.scrollY <= window.innerHeight) {
         // console.log("innan scroll");
       } else {
@@ -49,13 +49,13 @@ export default {
       }
     }
   },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
   },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
-};
+}
 </script>
 
 <style>
