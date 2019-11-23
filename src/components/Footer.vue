@@ -55,6 +55,10 @@
             <p class="p-class-span">info@rangbagen.se</p>
           </a>
         </v-col>
+        <v-col>
+            <i class="material-icons footer-icon">schedule</i>
+            <p class="p-class-span">Mån-Tor 08-16</p>
+        </v-col>
       </v-flex>
     </v-row>
   </v-footer>
@@ -99,12 +103,11 @@ export default {
 .footer-icon {
   background-color: #33383b;
   color: #ffffff;
-  font-size: 25px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
   text-align: center;
-  line-height: 42px;
+  line-height: 38px;
   margin: 8px 15px;
   vertical-align: middle;
 }
@@ -114,11 +117,18 @@ export default {
 }
 @media screen and (max-width: 439px) {
   .footer-left {
-    margin-right: -10px
+    margin-right: -10px;
   }
-    .footer-center {
-    margin-left: -10px
+  .footer-center {
+    margin-left: -10px;
   }
-  
+}
+
+@media screen and (max-width: 375px) {
+  .footer-icon{
+    width: auto;
+    height: auto;
+    font-size: 0px;
+  }
 }
 </style>
