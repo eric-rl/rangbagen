@@ -67,7 +67,7 @@ export default {
 }
 
 .bm-burger-bars {
-  background-color: #000000;
+  background-color: #000000 !important;
 }
 
 .nav-mobile-header {
@@ -85,7 +85,7 @@ export default {
   background-color: #e1d7d9 !important;
 }
 .bm-cross {
-  background: rgb(90, 87, 91);
+  background: rgb(90, 87, 91) !important;
 }
 
 span.bm-cross {
@@ -97,10 +97,10 @@ span.bm-cross {
   background-color: rgb(0, 0, 0);
 }
 .line-style {
-  height: 12%;
+  height: 12% !important;
 }
 .mobile-links {
-  color: black;
+  color: black !important;
   margin-top: 5px;
 }
 .bm-item-list > * > span {
