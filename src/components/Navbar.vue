@@ -54,19 +54,6 @@ export default {
         nav.className = 'scroll'
       }
     }
-  },
-  mounted () {
-    let ul = document.querySelector('#links')
-    let nav = document.querySelector('#navbar')
-    if (this.$store.state.OnHomePage) {
-      window.addEventListener('scroll', this.handleScroll)
-      ul.className = ''
-      nav.className = ''
-    } else {
-      window.removeEventListener('scroll', this.handleScroll)
-      ul.className = 'scroll'
-      nav.className = 'scroll'
-    }
   }
 }
 </script>

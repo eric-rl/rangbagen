@@ -84,7 +84,7 @@ export default {
     height: 100vh;
   }
 }
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 767px) {
   .video-container {
     display: none;
   }
@@ -112,7 +112,7 @@ export default {
     padding: 0;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) {
   .padding-right {
     padding-right: 5%;
   }
@@ -162,7 +162,7 @@ export default {
 </style>
 
 <style scoped>
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) {
   a {
     color: #fff;
     text-transform: uppercase;

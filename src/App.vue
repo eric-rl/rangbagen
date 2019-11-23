@@ -27,7 +27,7 @@ export default {
   margin-left: 0px;
   margin-right: 0px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   .desktop-navbar {
     display: none;
   }
@@ -46,7 +46,7 @@ export default {
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .mobil-navbar {
     display: none;
   }
