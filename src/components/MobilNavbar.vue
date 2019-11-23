@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style>
+<style soped>
 .bm-burger-button {
   z-index: 999;
   position: fixed !important;
@@ -82,7 +82,7 @@ export default {
 }
 
 .bm-menu {
-  background-color: #e1d7d9;
+  background-color: #e1d7d9 !important;
 }
 .bm-cross {
   background: rgb(90, 87, 91);
