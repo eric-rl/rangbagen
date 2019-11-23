@@ -1,9 +1,8 @@
 <template>
-  <v-container>
+  <v-container class="gallery-content">
     <v-row class="gallery-heading mb-6 justify-center" />
     <div class="gallery-container">
       <Stack
-        class="heeeej"
         :column-min-width="350"
         :gutter-width="15"
         :gutter-height="15"
@@ -69,6 +68,9 @@ export default {
   margin-top: 100px;
   width: 80vw;
   margin: 0 auto;
+}
+.gallery-content{
+  min-height: 100vh;
 }
 img {
   width: 100%;
