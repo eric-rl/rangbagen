@@ -23,6 +23,10 @@ export default {
 </script>
 
 <style>
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 @media screen and (max-width: 960px) {
   .desktop-navbar {
     display: none;

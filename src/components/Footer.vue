@@ -56,8 +56,8 @@
           </a>
         </v-col>
         <v-col>
-            <i class="material-icons footer-icon">schedule</i>
-            <p class="p-class-span">Mån-Tor 08-16</p>
+          <i class="material-icons footer-icon">schedule</i>
+          <p class="p-class-span">Mån-Tor 08-16</p>
         </v-col>
       </v-flex>
     </v-row>
@@ -66,8 +66,8 @@
 
 <script>
 export default {
-  name: 'BottomFooter'
-}
+  name: "BottomFooter"
+};
 </script>
 
 <style scoped>
@@ -122,13 +122,48 @@ export default {
   .footer-center {
     margin-left: -10px;
   }
+  .footer-icon {
+    margin: 8px 12px;
+  }
 }
 
-@media screen and (max-width: 375px) {
-  .footer-icon{
-    width: auto;
+@media screen and (max-width: 399px) {
+  .footer-icon {
+    /* width: 0;
     height: auto;
-    font-size: 0px;
+    font-size: 0px; */
+    margin: 8px 0px;
+    /* display: none; */
+  }
+  .footer-left {
+    margin-right: 2px;
+  }
+  .footer-center {
+    margin-left: 2px;
+  }
+  #bottom-footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 343px) {
+  .footer-icon {
+    display: none;
+  }
+  .footer-center {
+    min-width: 100vw;
+    text-align: center;
+    line-height: 3;
+  }
+  .footer-left {
+    min-width: 100vw;
+    text-align: center;
+    line-height: 3;
+  }
+  #bottom-footer {
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 </style>
