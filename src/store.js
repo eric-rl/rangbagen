@@ -5,12 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    OnHomePage: false
   },
   mutations: {
-
+    setOnHomePage (state, OnHomePage) {
+      state.OnHomePage = OnHomePage
+    }
   },
-  actions: {
-
+  getters: {
+    getOnHomPage: state => state.OnHomePage
   }
 })
