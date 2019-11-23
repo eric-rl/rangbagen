@@ -39,5 +39,4 @@ export default router = new Router({
 router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0)
   next()
-  // to and from are both route objects. must call `next`.
 })

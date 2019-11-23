@@ -89,7 +89,7 @@ export default {
   }
   .image-container {
     background-image: url("../image-gallery/Rangbagen27.jpg");
-    opacity: 0.7;
+    opacity: 0.8;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -149,7 +149,7 @@ export default {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 </style>
