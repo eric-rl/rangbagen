@@ -172,4 +172,11 @@ export default {
   margin: 40px 10%;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 850px) {
+  .col{
+    padding: 0 !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
 </style>
