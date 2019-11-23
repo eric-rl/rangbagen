@@ -1,24 +1,27 @@
 <template>
   <div>
-    <div class="köket-section">
+    <!-- <div class="köket-section">
       <h1 style="font-style:italic">Rängbågens <br> Kök</h1>
       <div class="köket-bg-section"></div>
       <a class="icon-down-open-big hero-arrow">
         <v-icon id="rängbågen" @click="$vuetify.goTo('#rängbågen')" x-large dark>mdi-chevron-down</v-icon>
       </a>
-    </div>
+    </div> -->
     <KöketInfo></KöketInfo>
   </div>
 </template>
 
 <script>
-import KöketInfo from "@/components/KöketInfo.vue";
+import KöketInfo from '@/components/KöketInfo.vue'
 export default {
-    components: {
-        KöketInfo,
+  components: {
+    KöketInfo
 
-    }
-};
+  },
+  created () {
+    this.$store.commit('setOnHomePage', false)
+  }
+}
 </script>
 
 <style>
@@ -48,7 +51,7 @@ export default {
   margin-bottom: 5%;
 }
 .köket-bg-section {
-  background-image: url("../assets/köket-1.jpg");
+  background-image: url("../image-gallery/Rangbagen3.jpg");
   opacity: 0.7;
   background-size: cover;
   background-position: center;

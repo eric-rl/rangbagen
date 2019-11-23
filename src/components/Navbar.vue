@@ -10,7 +10,7 @@
             <router-link to="/" @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
           </li>
           <li>
-            <router-link to="/historik">Historik</router-link>
+            <router-link to="/galleri">Galleri</router-link>
           </li>
           <li>
             <router-link to="/köket">Köket</router-link>
@@ -26,40 +26,49 @@
 
 <script>
 export default {
-  name: "Navbar",
-  data() {
-    return {
-      drawer: null,
-      items: [
-        { title: "Startsida", linking: "/" },
-        { title: "Rängbågen", linking: "rängbågen" },
-        { title: "Historik", linking: "historik" },
-        { title: "Köket", linking: "köket" },
-        { title: "Kontakt", linking: "kontakt" }
-      ]
-    };
-  },
-  components: {},
+  name: 'Navbar',
   methods: {
-    handleScroll(event) {
-      let nav = document.querySelector("#navbar");
-      let ul = document.querySelector("#links");
+    handleScroll (event) {
+      let nav = document.querySelector('#navbar')
+      let ul = document.querySelector('#links')
       if (window.scrollY <= window.innerHeight - 82) {
-        nav.className = "";
-        ul.className = "";
+        nav.className = ''
+        ul.className = ''
       } else {
-        nav.className = "scroll";
-        ul.className = "scroll";
+        nav.className = 'scroll'
+        ul.className = 'scroll'
       }
     }
   },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
+  watch: {
+    '$store.state.OnHomePage': function () {
+      let ul = document.querySelector('#links')
+      let nav = document.querySelector('#navbar')
+      if (this.$store.state.OnHomePage) {
+        window.addEventListener('scroll', this.handleScroll)
+        ul.className = ''
+        nav.className = ''
+      } else {
+        window.removeEventListener('scroll', this.handleScroll)
+        ul.className = 'scroll'
+        nav.className = 'scroll'
+      }
+    }
   },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+  mounted () {
+    let ul = document.querySelector('#links')
+    let nav = document.querySelector('#navbar')
+    if (this.$store.state.OnHomePage) {
+      window.addEventListener('scroll', this.handleScroll)
+      ul.className = ''
+      nav.className = ''
+    } else {
+      window.removeEventListener('scroll', this.handleScroll)
+      ul.className = 'scroll'
+      nav.className = 'scroll'
+    }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -82,7 +91,7 @@ nav {
   height: 0px;
 }
 nav.scroll {
-  background-color: rgba(223, 215, 225, 0.947);
+  background-color: #e1d7d9f3;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 ul > li > a {

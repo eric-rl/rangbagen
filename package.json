@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "dotenv-webpack": "^1.7.0",
     "vue": "^2.6.10",
+    "vue-burger-menu": "^2.0.2",
+    "vue-headroom": "^0.10.1",
     "vue-router": "^3.0.3",
     "vue2-google-maps": "^0.10.7",
     "vuetify": "^2.0.0",

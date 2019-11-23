@@ -1,25 +1,38 @@
 <template>
   <v-container class="kontakt-container" fluid>
+    <v-row class="kontakt-heading mb-6 justify-center">
+      <v-col class="kontakt-heading-text" xs6 lg6>
+        <div class="center">
+          Rängbågens förskola ligger med
+          <strong>åkerlandskap</strong>
+          <br />på ena sidan och
+          <strong>Rängbågsbyn</strong>
+          på andra.
+        </div>
+      </v-col>
+    </v-row>
     <div class="kontakt-content">
-      <v-row>
-        <v-flex md6>
+      <v-row justify="start" class="justify-start">
+        <v-flex sm6>
           <v-col class="left-contact">
-            <h1 class="thin">Telefon</h1>
+            <h1 class="thin">Info</h1>
             <br />
             <p>
               <strong>Rektor</strong>
               <br />Susanne Rasmusson
               <br />040-45 06 25
-              <br />Mån-Fre 08-15
+              <br />info@rangbagen.se
+              <br />Mån-Tor 08-16
             </p>
           </v-col>
         </v-flex>
-        <v-flex class="margin-auto" md6>
-          <v-img max-height="440" src="../assets/köket-3.jpg"></v-img>
+        <v-flex sm6 justify="left">
+          <v-img class="big-screen" height="340" position="left" contain src="../assets/susanne.jpeg"></v-img>
+          <v-img class="small-screen" height="340" contain src="../assets/susanne.jpeg"></v-img>
         </v-flex>
       </v-row>
-      <v-row class="d-flex flex-wrap-reverse margin-top">
-        <v-flex class="margin-auto order-2 pa-2" md6>
+      <v-row class="margin-top">
+        <v-flex md6 order-xs2 order-md1 xs12>
           <GmapMap :center="center" :map-type-id="mapTypeId" :zoom="15">
             <GmapMarker
               v-for="(item, index) in markers"
@@ -29,13 +42,13 @@
             />
           </GmapMap>
         </v-flex>
-        <v-flex md6 class="order-1 pa-2">
+        <v-flex md6 order-xs1 order-md2 class="pa-2">
           <v-col>
-            <h1 class="thin">Adress</h1>
+            <h1 class="thin adress">Adress</h1>
             <br />
-            <p>
-              Rängsand Vägen 24
-              <br />236 91
+            <p class="adress">
+              Räng sandsvägen 24
+              <br />236 61
               <br />Höllviken
             </p>
           </v-col>
@@ -47,26 +60,29 @@
 
 <script>
 export default {
-  name: "KontaktForm",
-  data() {
+  name: 'KontaktForm',
+  data () {
     return {
       center: { lat: 55.406201, lng: 13.001245 },
-      mapTypeId: "terrain",
+      mapTypeId: 'terrain',
       markers: [{ position: { lat: 55.406201, lng: 13.001245 } }]
-    };
+    }
   }
-};
+}
 </script>
 
-<style>
+<style scoped>
+.v-image__image{
+  background-position: left!important;
+}
+.v-image__image--contain{
+  background-position: left!important;
+}
 .vue-map-container {
   min-height: 350px;
-  max-width: 100%;
-  width: 100%;
 }
 .left-contact {
   text-align: right;
-  padding-right: 10%;
   font-weight: 300;
 }
 .margin-auto {
@@ -78,10 +94,6 @@ export default {
 .thin {
   font-weight: 300;
 }
-.rängbågen-container {
-  margin: 0;
-  padding: 0;
-}
 .center {
   font-style: italic;
 }
@@ -92,7 +104,7 @@ export default {
   align-items: center;
   letter-spacing: 1px;
   text-align: center;
-  height: 9em;
+  height: 14em;
   background: #e1e0d7;
 }
 .kontakt-content {
@@ -103,5 +115,31 @@ export default {
   text-align: justify;
   margin: 40px 10%;
   letter-spacing: 1px;
+}
+.container {
+  padding: 0;
+}
+
+.kontakt-heading-text {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 960px) {
+  .adress {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 600px){
+  .small-screen{
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .left-contact {
+    text-align: center;
+  }
+  .big-screen{
+    display: none;
+  }
 }
 </style>

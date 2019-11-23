@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 
 Vue.use(Router)
-
-export default new Router({
+let router
+export default router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -13,15 +13,15 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    // {
+    //   path: '/rängbågen',
+    //   name: 'Rängbågen',
+    //   component: () => import('./views/Rängbågen.vue')
+    // },
     {
-      path: '/rängbågen',
-      name: 'Rängbågen',
-      component: () => import('./views/Rängbågen.vue')
-    },
-    {
-      path: '/historik',
-      name: 'Historik',
-      component: () => import('./views/Historik.vue')
+      path: '/galleri',
+      name: 'Galleri',
+      component: () => import('./views/Galleri.vue')
     },
     {
       path: '/köket',
@@ -32,6 +32,12 @@ export default new Router({
       path: '/kontakt',
       name: 'Kontakt',
       component: () => import('./views/Kontakt.vue')
-    },
+    }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0)
+  next()
+  // to and from are both route objects. must call `next`.
 })
