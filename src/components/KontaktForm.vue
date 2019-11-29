@@ -88,6 +88,7 @@ export default {
 .left-contact {
   text-align: right;
   font-weight: 300;
+  padding: 12px!important;
 }
 .margin-auto {
   margin: auto;
