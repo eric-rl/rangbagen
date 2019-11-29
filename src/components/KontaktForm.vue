@@ -8,6 +8,10 @@
           <br />på ena sidan och
           <strong>Rängbågsbyn</strong>
           på andra.
+          <br />
+          <a class="link-no-styling" href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture"
+        target="_blank">
+          <v-btn large class="apply-button">Ansök Här</v-btn></a>
         </div>
       </v-col>
     </v-row>
@@ -121,7 +125,16 @@ export default {
 }
 
 .kontakt-heading-text {
-  margin-top: 40px;
+  margin-top: 4rem;
+}
+
+.apply-button{
+  margin-top: 2rem;
+  font-style: normal;
+}
+
+.link-no-styling{
+  text-decoration: none;
 }
 
 @media screen and (max-width: 960px) {

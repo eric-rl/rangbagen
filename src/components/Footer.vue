@@ -5,25 +5,25 @@
       <v-flex class="footer-left" md6>
         <v-col>
           <router-link class="mobile-links" to="/">
-            <span>Rängbågen</span>
+            <span class="p-class-span">Rängbågen</span>
             <i class="material-icons footer-icon">home</i>
           </router-link>
         </v-col>
         <v-col>
           <router-link class="mobile-links" to="/galleri">
-            <span>Galleri</span>
+            <span class="p-class-span">Galleri</span>
             <i class="material-icons footer-icon">photo</i>
           </router-link>
         </v-col>
         <v-col>
           <router-link class="mobile-links" to="/köket">
-            <span>Köket</span>
+            <span class="p-class-span">Köket</span>
             <i class="material-icons footer-icon">restaurant</i>
           </router-link>
         </v-col>
         <v-col>
           <router-link class="mobile-links" to="/kontakt">
-            <span>Kontakt</span>
+            <span class="p-class-span">Kontakt</span>
             <i class="material-icons footer-icon">perm_phone_msg</i>
           </router-link>
         </v-col>
@@ -124,6 +124,12 @@ export default {
   }
   .footer-icon {
     margin: 8px 12px;
+  }
+  #bottom-footer{
+    padding: 0px 0px 0px 0px;
+  }
+  .p-class-span{
+    margin: 0px 10px 0px 10px;
   }
 }
 

@@ -17,6 +17,14 @@
         <i class="material-icons">perm_phone_msg</i>
         <span>Kontakt</span>
       </router-link>
+      <a
+        class="mobile-links"
+        href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture"
+        target="_blank"
+      >
+        <i class="material-icons">open_in_new</i>
+        <span>Ansök</span>
+      </a>
     </Slide>
     <v-overlay :value="isMenuOpen" />
     <div class="mobile-nav-header">
@@ -26,7 +34,7 @@
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu'
+import { Slide } from "vue-burger-menu";
 export default {
   data: () => ({
     isMenuOpen: false
@@ -35,14 +43,14 @@ export default {
     Slide
   },
   methods: {
-    handleOpenMenu () {
-      this.isMenuOpen = true
+    handleOpenMenu() {
+      this.isMenuOpen = true;
     },
-    handleCloseMenu () {
-      this.isMenuOpen = false
-    },
-  },
-}
+    handleCloseMenu() {
+      this.isMenuOpen = false;
+    }
+  }
+};
 </script>
 
 <style soped>
