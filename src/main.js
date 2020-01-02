@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import dotenv from 'dotenv'
+import 'babel-polyfill'
 
 import '@mdi/font/css/materialdesignicons.css'
 

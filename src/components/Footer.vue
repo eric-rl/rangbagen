@@ -32,7 +32,7 @@
         <v-col>
           <a
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             href="https://www.google.com/maps/place/Rängbågens+Förskola/@55.4060488,12.9990353,17z/data=!3m1!4b1!4m5!3m4!1s0x46530cbe5a66daeb:0x6d12cb1c353aa7e3!8m2!3d55.4060488!4d13.001224"
             class="link"
           >
@@ -135,11 +135,7 @@ export default {
 
 @media screen and (max-width: 399px) {
   .footer-icon {
-    /* width: 0;
-    height: auto;
-    font-size: 0px; */
     margin: 8px 0px;
-    /* display: none; */
   }
   .footer-left {
     margin-right: 2px;
