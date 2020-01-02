@@ -13,11 +13,6 @@ export default router = new Router({
       name: 'home',
       component: Home
     },
-    // {
-    //   path: '/rängbågen',
-    //   name: 'Rängbågen',
-    //   component: () => import('./views/Rängbågen.vue')
-    // },
     {
       path: '/galleri',
       name: 'Galleri',

@@ -11,7 +11,7 @@
           <br />
           <a class="link-no-styling" href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture"
         target="_blank">
-          <v-btn large class="apply-button">Ansök Här</v-btn></a>
+          <v-btn large class="apply-button">Ansök Här om föreskoleplats</v-btn></a>
         </div>
       </v-col>
     </v-row>
@@ -24,7 +24,7 @@
             <p>
               <strong>Rektor</strong>
               <br />Susanne Rasmusson
-              <br />040-45 06 25
+              <br />040-45 06 26
               <br />info@rangbagen.se
               <br />Mån-Tor 08-16
             </p>

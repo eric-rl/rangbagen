@@ -14,14 +14,15 @@
         <v-flex lg5 offset-lg1 md5>
           <v-col>
             <h1 class="thin">
-              <i>Arbetsätt</i>
+              <i>Arbetssätt</i>
             </h1>
             <br />
             <p>
               Vi ser och lyfter fram barnets olika uttryckssätt genom att använda oss av musik, drama, bild, rörelse mm. Genom detta
               arbetssätt får barnet chans att utveckla sina förmågor och på så vis stärks barnets självtillit. Det stimulerar också
               barnets nyfikenhet och lust att söka kunskap. Alla barns olika uttryckssätt är lika viktiga och rangordnas inte.
-              Verksamheten består av cirka 80 barn fördelade på fem ålderhomogena avdelningar från ett till fem år.
+              Verksamheten består av cirka 80 barn fördelade på fem åldershomogena avdelningar från ett till fem år.
+              Vårt arbetssätt är inkluderande, uttforskande, nyfiket, kreativt och framför altt roligt.
             </p>
           </v-col>
         </v-flex>
@@ -70,7 +71,7 @@
             <br />
             <p>
               Rängbågen ser barnet som det rika och kompetenta barnet. Ett barn som utvecklas i en miljö präglad av lust och glädje.
-              Ett barn vars 100 språk aldrig får tystas, Rängbågen erbjuder en verksamhet med utrymme för en mångfald av uttrycksmedel.
+              Ett barn vars 100 språk aldrig får tystas. Rängbågen erbjuder en verksamhet med utrymme för en mångfald av uttrycksmedel.
             </p>
           </v-col>
         </v-flex>

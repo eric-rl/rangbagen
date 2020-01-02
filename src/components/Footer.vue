@@ -46,7 +46,7 @@
         <v-col>
           <i class="material-icons footer-icon">phone</i>
           <p class="p-class-span">
-            <span>040-45 06 25</span>
+            <span>040-45 06 26</span>
           </p>
         </v-col>
         <v-col>
@@ -57,7 +57,7 @@
         </v-col>
         <v-col>
           <i class="material-icons footer-icon">schedule</i>
-          <p class="p-class-span">Mån-Tor 08-16</p>
+          <p class="p-class-span">Mån-Fre 06:30-18:00</p>
         </v-col>
       </v-flex>
     </v-row>

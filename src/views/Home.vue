@@ -3,7 +3,7 @@
     <div class="section">
       <h1 style="">
         Välkommen till
-        <br />Rängbågen
+        <br />Rängbågens förskola
       </h1>
 
       <div class="video-container">
