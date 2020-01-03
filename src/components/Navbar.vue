@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="nav-desktop">
-      <nav id="navbar">
-        <router-link class="no-styling" to="/">
-          <img src="../assets/rang-logga.png" class="logo" width="77px" height="56px" />
+    <div class='nav-desktop'>
+      <nav id='navbar'>
+        <router-link class='no-styling' to='/'>
+          <img src='../assets/rang-logga.png' class='logo' width='77px' height='56px' />
         </router-link>
-        <ul id="links">
+        <ul id='links'>
           <li>
-            <router-link to="/" @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
+            <router-link to='/' @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
           </li>
           <li>
-            <router-link to="/galleri">Galleri</router-link>
+            <router-link to='/galleri'>Galleri</router-link>
           </li>
           <li>
-            <router-link to="/köket">Köket</router-link>
+            <router-link to='/köket'>Köket</router-link>
           </li>
           <li>
-            <router-link to="/kontakt">Kontakt</router-link>
+            <router-link to='/kontakt'>Kontakt</router-link>
           </li>
         </ul>
       </nav>
@@ -53,6 +53,17 @@ export default {
         ul.className = 'scroll'
         nav.className = 'scroll'
       }
+    }
+  },
+  mounted: function () {
+    let ul = document.querySelector('#links')
+    let nav = document.querySelector('#navbar')
+    if (this.$store.state.OnHomePage) {
+      ul.className = ''
+      nav.className = ''
+    } else {
+      ul.className = 'scroll'
+      nav.className = 'scroll'
     }
   }
 }
@@ -117,7 +128,7 @@ a {
 a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   left: 50%;

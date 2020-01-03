@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { Slide } from "vue-burger-menu";
+import { Slide } from 'vue-burger-menu'
 export default {
   data: () => ({
     isMenuOpen: false
@@ -43,14 +43,14 @@ export default {
     Slide
   },
   methods: {
-    handleOpenMenu() {
-      this.isMenuOpen = true;
+    handleOpenMenu () {
+      this.isMenuOpen = true
     },
-    handleCloseMenu() {
-      this.isMenuOpen = false;
+    handleCloseMenu () {
+      this.isMenuOpen = false
     }
   }
-};
+}
 </script>
 
 <style soped>
