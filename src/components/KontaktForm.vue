@@ -83,7 +83,7 @@ export default {
   background-position: left!important;
 }
 .vue-map-container {
-  min-height: 350px;
+  min-height: 400px;
 }
 .left-contact {
   text-align: right;
