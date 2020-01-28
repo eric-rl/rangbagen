@@ -92,7 +92,7 @@ export default {
     document.head.appendChild(script);
 
     script = document.createElement("script");
-    script.setAttribute("src", "https://abbum.se/rangbagens-forskola/queue-form.js");
+    script.setAttribute("src", "https://abbum.se/rosatornet/queue-form.js");
     document.head.appendChild(script);
   },
   mounted() {

@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div class="nav-desktop">
-      <nav id="navbar">
-        <router-link class="no-styling" to="/">
-          <img src="../assets/rang-logga.png" class="logo" width="77px" height="56px" />
+    <div class='nav-desktop'>
+      <nav id='navbar'>
+        <router-link class='no-styling' to='/'>
+          <img src='../assets/rang-logga.png' class='logo' width='77px' height='56px' />
         </router-link>
-        <ul id="links">
+        <ul id='links'>
           <li>
-            <router-link to="/" @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
+            <router-link to='/' @click="$vuetify.goTo('#rängbågen')">Rängbågen</router-link>
           </li>
           <li>
-            <router-link to="/galleri">Galleri</router-link>
+            <router-link to='/galleri'>Galleri</router-link>
           </li>
           <li>
-            <router-link to="/köket">Köket</router-link>
+            <router-link to='/köket'>Köket</router-link>
           </li>
           <li>
-            <router-link to="/kontakt">Kontakt</router-link>
+            <router-link to='/kontakt'>Kontakt</router-link>
           </li>
         </ul>
       </nav>
@@ -26,76 +26,47 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   methods: {
-    // eslint-disable-next-line no-unused-vars
-    handleScroll(event) {
-      let nav = document.querySelector("#navbar");
-      let ul = document.querySelector("#links");
+    handleScroll (event) {
+      let nav = document.querySelector('#navbar')
+      let ul = document.querySelector('#links')
       if (window.scrollY <= window.innerHeight - 82) {
-        nav.className = "";
-        ul.className = "";
+        nav.className = ''
+        ul.className = ''
       } else {
-        nav.className = "scroll";
-        ul.className = "scroll";
+        nav.className = 'scroll'
+        ul.className = 'scroll'
       }
     }
   },
   watch: {
-    "$store.state.OnHomePage": function() {
-      let ul = document.querySelector("#links");
-      let nav = document.querySelector("#navbar");
-      if (this.$store.state.OnHomePage && !/Edge/.test(navigator.userAgent)) {
-        window.addEventListener("scroll", this.handleScroll);
-        ul.className = "";
-        nav.className = "";
-      } else if (
-        /Edge/.test(navigator.userAgent)
-      ) {
-        window.removeEventListener("scroll", this.handleScroll);
-        // eslint-disable-next-line no-console
-        console.log("du är på startsidan och på edge")
-        ul.className = "scroll";
-        nav.className = "edge";
+    '$store.state.OnHomePage': function () {
+      let ul = document.querySelector('#links')
+      let nav = document.querySelector('#navbar')
+      if (this.$store.state.OnHomePage) {
+        window.addEventListener('scroll', this.handleScroll)
+        ul.className = ''
+        nav.className = ''
       } else {
-        window.removeEventListener("scroll", this.handleScroll);
-        ul.className = "scroll";
-        nav.className = "scroll";
+        window.removeEventListener('scroll', this.handleScroll)
+        ul.className = 'scroll'
+        nav.className = 'scroll'
       }
     }
   },
-  mounted: function() {
-    let ul = document.querySelector("#links");
-    let nav = document.querySelector("#navbar");
-    if (this.$store.state.OnHomePage && !/Edge/.test(navigator.userAgent)) {
-      ul.className = "";
-      nav.className = "";
-      // eslint-disable-next-line no-console
-      console.log("this.$store.state.OnHomePage && !/Edge/.test(navigator.userAgent)")
-    } else if(/Edge/.test(navigator.userAgent)) {
-      // eslint-disable-next-line no-console
-      console.log("/Edge/.test(navigator.userAgent)")
-      ul.className = "scroll";
-      nav.className = "edge";
-    } else{
-      // eslint-disable-next-line no-console
-      console.log("else")
-      ul.className="scroll"
-      nav.className="scroll"
+  mounted: function () {
+    let ul = document.querySelector('#links')
+    let nav = document.querySelector('#navbar')
+    if (this.$store.state.OnHomePage) {
+      ul.className = ''
+      nav.className = ''
+    } else {
+      ul.className = 'scroll'
+      nav.className = 'scroll'
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-      // eslint-disable-next-line no-console
-      console.log("allt har laddat");
-      if (/Edge/.test(navigator.userAgent)) {
-        // eslint-disable-next-line no-console
-        console.log("du använder edge mounted");
-        ul.className = "scroll";
-        nav.className = "edge";
-      }
-    });
   }
-};
+}
 </script>
 
 <style scoped>
@@ -119,10 +90,6 @@ nav {
 }
 nav.scroll {
   background-color: #e1d7d9f3;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-nav.edge {
-  background-color: #e1d7d9;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 ul > li > a {
@@ -161,7 +128,7 @@ a {
 a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   left: 50%;
