@@ -9,9 +9,6 @@
           <strong>Rängbågsbyn</strong>
           på andra.
           <br />
-          <a class="link-no-styling" href="https://en.wikipedia.org/wiki/Academy_Award_for_Best_Picture"
-        target="_blank">
-          <v-btn large class="apply-button">Ansök Här om föreskoleplats</v-btn></a>
         </div>
       </v-col>
     </v-row>
@@ -31,7 +28,13 @@
           </v-col>
         </v-flex>
         <v-flex sm6 justify="left">
-          <v-img class="big-screen" height="340" position="left" contain src="../assets/susanne.jpeg"></v-img>
+          <v-img
+            class="big-screen"
+            height="340"
+            position="left"
+            contain
+            src="../assets/susanne.jpeg"
+          ></v-img>
           <v-img class="small-screen" height="340" contain src="../assets/susanne.jpeg"></v-img>
         </v-flex>
       </v-row>
@@ -58,29 +61,71 @@
           </v-col>
         </v-flex>
       </v-row>
+      <v-row class="form">
+        <v-flex class="pa-2">
+          <div id="abbum-queue"></div>
+        </v-flex>
+      </v-row>
     </div>
   </v-container>
 </template>
-
 <script>
 export default {
-  name: 'KontaktForm',
-  data () {
+  name: "KontaktForm",
+  data() {
     return {
       center: { lat: 55.406201, lng: 13.001245 },
-      mapTypeId: 'terrain',
+      mapTypeId: "terrain",
       markers: [{ position: { lat: 55.406201, lng: 13.001245 } }]
-    }
+    };
+  },
+  created() {
+    let script = document.createElement("script");
+    script.setAttribute("src", "https://code.jquery.com/jquery-3.4.1.min.js");
+    document.head.appendChild(script);
+
+    script = document.createElement("script");
+    script.setAttribute(
+      "src",
+      "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    );
+    document.head.appendChild(script);
+
+    script = document.createElement("script");
+    script.setAttribute("src", "https://abbum.se/rangbagens-forskola/queue-form.js");
+    document.head.appendChild(script);
+  },
+  mounted() {
+    setTimeout(() => {
+
+      let list = document.getElementsByTagName("input");
+      let textArea = document.getElementById("abbum-queue-message")
+
+      if (list) {
+        textArea.className="form-input"
+        for (let item of list) {
+          item.className = "form-input";
+        }
+      }
+    }, 500);
   }
-}
+};
 </script>
 
-<style scoped>
-.v-image__image{
-  background-position: left!important;
+<style>
+#abbum-queue{
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
-.v-image__image--contain{
-  background-position: left!important;
+.form-input {
+  border-style: solid !important;
+  border: 1px gray;
+}
+.v-image__image {
+  background-position: left !important;
+}
+.v-image__image--contain {
+  background-position: left !important;
 }
 .vue-map-container {
   min-height: 400px;
@@ -88,7 +133,7 @@ export default {
 .left-contact {
   text-align: right;
   font-weight: 300;
-  padding: 12px!important;
+  padding: 12px !important;
 }
 .margin-auto {
   margin: auto;
@@ -129,12 +174,12 @@ export default {
   margin-top: 4rem;
 }
 
-.apply-button{
+.apply-button {
   margin-top: 2rem;
   font-style: normal;
 }
 
-.link-no-styling{
+.link-no-styling {
   text-decoration: none;
 }
 
@@ -143,8 +188,8 @@ export default {
     text-align: center;
   }
 }
-@media screen and (min-width: 600px){
-  .small-screen{
+@media screen and (min-width: 600px) {
+  .small-screen {
     display: none;
   }
 }
@@ -152,7 +197,7 @@ export default {
   .left-contact {
     text-align: center;
   }
-  .big-screen{
+  .big-screen {
     display: none;
   }
 }

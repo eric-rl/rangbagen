@@ -8,22 +8,34 @@
 </template>
 
 <script>
-import MobilNavbar from './components/MobilNavbar.vue'
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import MobilNavbar from "./components/MobilNavbar.vue";
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
     MobilNavbar,
     Footer
   },
+  created() {
+    if (
+      /Edge/.test(navigator.userAgent) ||
+      /MSIE 9/i.test(navigator.userAgent) ||
+      /rv:11.0/i.test(navigator.userAgent) ||
+      /MSIE 10/i.test(navigator.userAgent)
+    ) {
+      alert(
+        "Du använder en webbläsare som vi inte supportar fullt ut. Testa gärna Chrome eller Safari"
+      );
+    }
+  },
   data: () => ({})
-}
+};
 </script>
 
 <style>
-.row{
+.row {
   margin-left: 0px;
   margin-right: 0px;
 }
