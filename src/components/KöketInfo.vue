@@ -18,8 +18,7 @@
             </h1>
             <br />
             <p>
-              Vi strävar efter att ge alla barn en bred ”matkultur”. Vi handlar färska råvaror med hög kvalitet från vårt närsamhälle
-              för att slippa mellanhänder, vi undviker också i möjligaste mån halvfabrikat.
+              Vi strävar efter att ge alla barn en bred ”matkultur”. Vi handlar råvaror med hög kvalitet samt undviker i möjligaste mån halvfabrikat.
               Måltiderna ska vara tilltalande både för gom och öga. Dessutom ska måltiden vara en lugn stund med trevligt umgänge.
               Rängbågens pedagoger äter tillsammans med barnen.
             </p>
